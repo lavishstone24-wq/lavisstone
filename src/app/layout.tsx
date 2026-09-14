@@ -7,6 +7,7 @@ import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { QuickQuoteModal } from "@/components/contact/QuickQuoteModal";
 import { QuoteModalProvider } from "@/context/QuoteModalContext";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
+import { InitialLoader } from "@/components/common/InitialLoader";
 
 
 export const viewport: Viewport = {
@@ -91,6 +92,7 @@ export default function RootLayout({
         <WebSiteJsonLd />
       </head>
       <body className="bg-brand-black text-brand-ivory font-sans antialiased min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-black">
+        <InitialLoader />
         <QuoteModalProvider>
           <Header />
           <main className="flex-grow pt-0">{children}</main>
