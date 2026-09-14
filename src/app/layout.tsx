@@ -32,9 +32,16 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  alternates: {
+    canonical: "./",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+  },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
+    alternateLocale: ["en_US"],
     url: siteConfig.url,
     title: "Lavish Stone | Premium Decorative Pebbles & Landscape Stones",
     description: siteConfig.description,

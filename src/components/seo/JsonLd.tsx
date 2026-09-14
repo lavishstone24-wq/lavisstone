@@ -4,17 +4,32 @@ import { siteConfig } from "@/config/siteConfig";
 export function OrganizationJsonLd() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "LocalBusiness", "WholesaleStore"],
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     url: siteConfig.url,
     logo: `${siteConfig.url}${siteConfig.logo}`,
+    image: `${siteConfig.url}/images/products/natural-river-pebbles-hero.jpg`,
     description: siteConfig.description,
+    priceRange: "$$",
+    currenciesAccepted: "INR, USD, EUR",
+    paymentAccepted: "Cash, Credit Card, Bank Transfer, Wire Transfer",
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "State", name: "Gujarat" },
+      { "@type": "City", name: "Rajkot" },
+      { "@type": "AdministrativeArea", name: "Worldwide Export" },
+    ],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "22.3039",
+      longitude: "70.8022",
+    },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: siteConfig.contact.phone,
-      contactType: "sales",
-      availableLanguage: ["English"],
+      contactType: "customer service and sales",
+      availableLanguage: ["English", "Hindi", "Gujarati"],
     },
     address: {
       "@type": "PostalAddress",
@@ -23,6 +38,14 @@ export function OrganizationJsonLd() {
       addressRegion: "Gujarat",
       addressCountry: "IN",
     },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "09:00",
+        closes: "18:30",
+      },
+    ],
     sameAs: Object.values(siteConfig.socials).filter(Boolean),
   };
 

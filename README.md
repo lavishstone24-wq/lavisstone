@@ -31,4 +31,4 @@ Official website and digital catalog for **Lavish Stone Materials** — manufact
 
 ## Contact & Inquiries
 - **Email**: Lavishstone24@gmail.com
-- **Website**: [https://www.lavishstone.com](https://www.lavishstone.com)
+- **Website**: [https://www.lavishstone.in](https://www.lavishstone.in)

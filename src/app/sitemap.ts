@@ -6,11 +6,18 @@ import { blogPosts } from "@/data/blog";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
 
+  const getPriority = (route: string) => {
+    if (route === "") return 1.0;
+    if (route === "/products" || route === "/contact") return 0.9;
+    if (route === "/privacy-policy" || route === "/terms-and-conditions") return 0.3;
+    return 0.8;
+  };
+
   // Static routes
   const staticRoutes = [
     "",
-    "/about",
     "/products",
+    "/about",
     "/applications",
     "/gallery",
     "/export",
@@ -21,8 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: route === "" ? 1.0 : 0.8,
+    changeFrequency: route === "" || route === "/products" ? ("daily" as const) : ("weekly" as const),
+    priority: getPriority(route),
   }));
 
   // Product categories
