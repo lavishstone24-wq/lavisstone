@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/siteConfig";
-import { Mail, Phone, MapPin, Clock, ArrowUpRight, Shield } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ArrowUpRight, Shield, MessageCircle } from "lucide-react";
 
 export function Footer() {
   const currentYear = 2026;
@@ -187,12 +187,20 @@ export function Footer() {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-brand-gold mt-0.5 flex-shrink-0" />
+                <MessageCircle className="w-4 h-4 text-[#25D366] mt-0.5 flex-shrink-0" />
                 <div>
-                  <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="text-brand-ivory hover:text-brand-gold transition-colors">
-                    {siteConfig.contact.phoneFormatted}
+                  <a
+                    href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
+                      siteConfig.contact.whatsappDefaultMessage
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-ivory hover:text-[#25D366] transition-colors font-medium inline-flex items-center gap-1 text-xs"
+                  >
+                    <span>Connect on WhatsApp</span>
+                    <ArrowUpRight className="w-3 h-3 text-brand-gold" />
                   </a>
-                  <p className="text-[11px] text-brand-muted">Phone & WhatsApp Support</p>
+                  <p className="text-[11px] text-brand-muted">Direct Instant Assistance</p>
                 </div>
               </div>
 
@@ -200,7 +208,9 @@ export function Footer() {
                 <MapPin className="w-4 h-4 text-brand-gold mt-0.5 flex-shrink-0" />
                 <div className="text-xs">
                   <p className="text-brand-ivory">{siteConfig.contact.addressLine1}</p>
-                  <p className="text-[11px] text-brand-muted">{siteConfig.contact.addressLine2}</p>
+                  {siteConfig.contact.addressLine2 ? (
+                    <p className="text-[11px] text-brand-muted">{siteConfig.contact.addressLine2}</p>
+                  ) : null}
                 </div>
               </div>
 

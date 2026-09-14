@@ -75,42 +75,32 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-brand-gold mt-0.5 flex-shrink-0" />
+                  <MessageSquare className="w-5 h-5 text-[#25D366] mt-0.5 flex-shrink-0" />
                   <div>
-                    <span className="text-brand-ivory font-medium block">Direct Telephone:</span>
-                    <a
-                      href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
-                      className="hover:text-brand-gold transition-colors"
-                    >
-                      {siteConfig.contact.phoneFormatted}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <MessageSquare className="w-5 h-5 text-brand-gold mt-0.5 flex-shrink-0" />
-                  <div>
-                    <span className="text-brand-ivory font-medium block">WhatsApp Export Desk:</span>
+                    <span className="text-brand-ivory font-medium block">Direct WhatsApp Desk:</span>
                     <a
                       href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
                         siteConfig.contact.whatsappDefaultMessage
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#25D366] hover:underline inline-flex items-center gap-1"
+                      className="text-[#25D366] hover:underline inline-flex items-center gap-1 font-medium"
                     >
                       <span>Connect via WhatsApp</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
+                    <p className="text-[11px] text-brand-muted mt-0.5">Instant quotes, samples & material inquiries</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-brand-gold mt-0.5 flex-shrink-0" />
                   <div>
-                    <span className="text-brand-ivory font-medium block">Export Office & Dispatch:</span>
-                    <p className="text-brand-ivory/80">{siteConfig.contact.addressLine1}</p>
-                    <p className="text-[11px] text-brand-muted mt-0.5">{siteConfig.contact.addressLine2}</p>
+                    <span className="text-brand-ivory font-medium block">Office & Dispatch:</span>
+                    <p className="text-brand-ivory/90">{siteConfig.contact.addressLine1}</p>
+                    {siteConfig.contact.addressLine2 ? (
+                      <p className="text-[11px] text-brand-muted mt-0.5">{siteConfig.contact.addressLine2}</p>
+                    ) : null}
                   </div>
                 </div>
 

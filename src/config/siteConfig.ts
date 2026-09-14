@@ -39,13 +39,13 @@ export const siteConfig: SiteConfig = {
   logo3D: "/images/brand/lavish-stone-3d-wall.png",
   contact: {
     email: "Lavishstone24@gmail.com",
-    phone: "+91 98765 43210",
-    phoneFormatted: "+91 98765 43210",
-    whatsappNumber: "919876543210",
+    phone: "+91 99049 63554",
+    phoneFormatted: "Direct WhatsApp Desk",
+    whatsappNumber: "919904963554",
     whatsappDefaultMessage:
       "Hello Lavish Stone, I am interested in your decorative stone products. Please share product details and pricing.",
-    addressLine1: "Corporate & Export Office, Stone Park Zone",
-    addressLine2: "[Configure Factory / Warehouse Address in siteConfig.ts]",
+    addressLine1: "Rajkot, Gujarat, India",
+    addressLine2: "",
     businessHours: "Monday - Saturday: 09:00 AM - 06:30 PM",
     exportDeskEmail: "Lavishstone24@gmail.com",
   },

@@ -19,7 +19,9 @@ export function OrganizationJsonLd() {
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.contact.addressLine1,
-      addressLocality: siteConfig.contact.addressLine2,
+      addressLocality: "Rajkot",
+      addressRegion: "Gujarat",
+      addressCountry: "IN",
     },
     sameAs: Object.values(siteConfig.socials).filter(Boolean),
   };
