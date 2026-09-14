@@ -52,6 +52,8 @@ export function Hero() {
           </Link>
 
           <button
+            type="button"
+            id="hero-quote-btn"
             onClick={() => openQuoteModal()}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-black/40 hover:bg-black/70 text-brand-ivory hover:text-brand-gold border border-brand-gold/60 hover:border-brand-gold text-xs sm:text-sm uppercase tracking-widest font-semibold rounded backdrop-blur-md transition-all duration-300 cursor-pointer"
           >

@@ -15,7 +15,15 @@ interface InquiryPayload {
 
 export async function POST(req: Request) {
   try {
-    const body: InquiryPayload = await req.json();
+    let body: InquiryPayload;
+    try {
+      body = await req.json();
+    } catch {
+      return NextResponse.json(
+        { success: false, error: "Invalid JSON payload in request." },
+        { status: 400 }
+      );
+    }
 
     const {
       fullName,
@@ -50,7 +58,7 @@ export async function POST(req: Request) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
-    const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || "Lavishstone24@gmail.com";
+    const receiverEmail = (process.env.CONTACT_RECEIVER_EMAIL || "lavishstone24@gmail.com").trim().toLowerCase();
     const fromEmail = process.env.CONTACT_FROM_EMAIL || "Lavish Stone <onboarding@resend.dev>";
 
     // If API key is not configured or still placeholder, log instructions and return simulated success for testing

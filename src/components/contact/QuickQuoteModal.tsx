@@ -103,10 +103,11 @@ export function QuickQuoteModal() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300"
       role="dialog"
       aria-modal="true"
       aria-labelledby="quote-modal-title"
+      onClick={closeQuoteModal}
     >
       <div
         className="relative w-full max-w-2xl bg-brand-charcoal border border-brand-gold/30 rounded-lg shadow-2xl p-6 md:p-8 max-h-[90vh] overflow-y-auto text-brand-ivory"
