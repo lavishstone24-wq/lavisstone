@@ -59,11 +59,10 @@ export function InitialLoader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#070708] text-brand-ivory select-none transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] ${
-        isExiting
+      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#070708] text-brand-ivory select-none transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] ${isExiting
           ? "opacity-0 scale-[1.03] pointer-events-none filter blur-sm"
           : "opacity-100 scale-100"
-      }`}
+        }`}
       aria-hidden="true"
     >
       {/* Background Ambience: Deep Obsidian Canvas with Gold Core Radiance */}
@@ -88,7 +87,7 @@ export function InitialLoader() {
         <div className="relative mb-6">
           {/* Backlight Aura */}
           <div className="absolute -inset-6 rounded-full bg-brand-gold/15 blur-2xl animate-pulse" />
-          
+
           <div className="relative w-24 h-24 sm:w-28 sm:h-28 aspect-[1334/1179] mx-auto overflow-hidden">
             <Image
               src={siteConfig.logo}
@@ -97,7 +96,7 @@ export function InitialLoader() {
               priority
               className="object-contain drop-shadow-[0_8px_30px_rgba(201,162,74,0.4)]"
             />
-            
+
             {/* Shimmer Light Beam Sweep across logo */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -translate-x-full animate-[loaderShimmer_2s_infinite] pointer-events-none" />
           </div>
@@ -132,9 +131,8 @@ export function InitialLoader() {
                   className="relative h-[3px] bg-white/10 rounded-full overflow-hidden"
                 >
                   <div
-                    className={`absolute inset-y-0 left-0 bg-gradient-to-r from-[#C9A24A] via-[#E0C47A] to-[#F5D77F] transition-all duration-75 rounded-full ${
-                      isFilled ? "shadow-[0_0_8px_rgba(201,162,74,0.9)]" : ""
-                    }`}
+                    className={`absolute inset-y-0 left-0 bg-gradient-to-r from-[#C9A24A] via-[#E0C47A] to-[#F5D77F] transition-all duration-75 rounded-full ${isFilled ? "shadow-[0_0_8px_rgba(201,162,74,0.9)]" : ""
+                      }`}
                     style={{ width: `${segmentFill}%` }}
                   />
                 </div>
@@ -150,9 +148,6 @@ export function InitialLoader() {
                 {getStatusText()}
               </span>
             </div>
-            <span className="font-mono text-brand-gold font-medium text-[11px]">
-              {progress}%
-            </span>
           </div>
         </div>
       </div>
