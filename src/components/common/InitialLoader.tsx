@@ -116,7 +116,7 @@ export function InitialLoader() {
         <div className="w-full max-w-[260px] mt-8 space-y-3">
           {/* 4 Segment Bars */}
           <div className="grid grid-cols-4 gap-2 w-full">
-            {[0, 1, 2, 3].map((idx) => {
+            {[0, 1, 2].map((idx) => {
               // Calculate segment progress (0 to 100% within its 25% slice)
               const segmentStart = idx * 25;
               const segmentFill = Math.max(
