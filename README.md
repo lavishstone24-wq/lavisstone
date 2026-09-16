@@ -31,4 +31,5 @@ Official website and digital catalog for **Lavish Stone Materials** — manufact
 
 ## Contact & Inquiries
 - **Email**: Lavishstone24@gmail.com
+- **Phone / WhatsApp**: +91 87960 82406
 - **Website**: [https://www.lavishstone.in](https://www.lavishstone.in)

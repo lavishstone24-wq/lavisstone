@@ -187,20 +187,26 @@ export function Footer() {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <MessageCircle className="w-4 h-4 text-[#25D366] mt-0.5 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-brand-gold mt-0.5 flex-shrink-0" />
                 <div>
+                  <a
+                    href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+                    className="text-brand-ivory hover:text-brand-gold transition-colors font-medium text-xs block"
+                  >
+                    {siteConfig.contact.phone}
+                  </a>
                   <a
                     href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
                       siteConfig.contact.whatsappDefaultMessage
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-brand-ivory hover:text-[#25D366] transition-colors font-medium inline-flex items-center gap-1 text-xs"
+                    className="text-[#25D366] hover:underline transition-colors font-medium inline-flex items-center gap-1 text-xs mt-0.5"
                   >
-                    <span>Connect on WhatsApp</span>
-                    <ArrowUpRight className="w-3 h-3 text-brand-gold" />
+                    <span>WhatsApp Desk</span>
+                    <ArrowUpRight className="w-3 h-3 text-[#25D366]" />
                   </a>
-                  <p className="text-[11px] text-brand-muted">Direct Instant Assistance</p>
+                  <p className="text-[11px] text-brand-muted">Instant Quotations & Assistance</p>
                 </div>
               </div>
 

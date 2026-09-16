@@ -75,21 +75,30 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <MessageSquare className="w-5 h-5 text-[#25D366] mt-0.5 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-brand-gold mt-0.5 flex-shrink-0" />
                   <div>
-                    <span className="text-brand-ivory font-medium block">Direct WhatsApp Desk:</span>
-                    <a
-                      href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
-                        siteConfig.contact.whatsappDefaultMessage
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#25D366] hover:underline inline-flex items-center gap-1 font-medium"
-                    >
-                      <span>Connect via WhatsApp</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
-                    <p className="text-[11px] text-brand-muted mt-0.5">Instant quotes, samples & material inquiries</p>
+                    <span className="text-brand-ivory font-medium block">Direct Phone & WhatsApp:</span>
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-0.5">
+                      <a
+                        href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+                        className="text-brand-gold hover:underline font-medium"
+                      >
+                        {siteConfig.contact.phone}
+                      </a>
+                      <span className="text-brand-muted">•</span>
+                      <a
+                        href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
+                          siteConfig.contact.whatsappDefaultMessage
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#25D366] hover:underline inline-flex items-center gap-1 font-medium"
+                      >
+                        <span>WhatsApp Desk</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                    <p className="text-[11px] text-brand-muted mt-1">Direct calls, instant WhatsApp quotes & material specs</p>
                   </div>
                 </div>
 
